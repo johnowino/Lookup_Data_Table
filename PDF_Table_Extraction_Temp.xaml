@@ -1,0 +1,351 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PDF_Table_Extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,3429.3333333333335" sap2010:WorkflowViewState.IdRef="PDF_Table_Extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PDF_Table_Extraction" sap:VirtualizedContainerService.HintSize="592,3364.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="LinearRateExtractDt" />
+      <Variable x:TypeArguments="sd:DataTable" Name="PDFExtractDt" />
+      <Variable x:TypeArguments="x:String" Name="PartnerShort" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf" sap:VirtualizedContainerService.HintSize="530,1037.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="205f1699-9eff-4c7e-a591-02a1a7188cfa" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,818" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strPDFExtract" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[PDFExtractDt]" DisplayName="Extract Table Data - Brown Field" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='CV' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Item Description' ReferenceIdx='0' Name='Item Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='UOM' ReferenceIdx='1' Name='UOM'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price' ReferenceIdx='2' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='QTY' ReferenceIdx='3' Name='QTY'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total' ReferenceIdx='4' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" sap:VirtualizedContainerService.HintSize="388,160" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="205f1699-9eff-4c7e-a591-02a1a7188cfa" Version="V3">
+              <uix:NExtractData.ExtractMetadata>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </uix:NExtractData.ExtractMetadata>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable CvElementArea="294, 365, 655, 504" CvType="Table" DesignTimeRectangle="294, 365, 655, 504" DesignTimeScaleFactor="1" ElementType="Table" FriendlyName="'msedge.exe MRN149405'" Guid="1433b5e6-2f2c-4bfc-a799-209da5a09ef2" InformativeScreenshot="7ef22500f90581059bf815d11bf6e171.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='MRN149405 - MURANGA COUNTY GOVERNMENT - MURIRANJAS HOSPITAL.pdf *' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:OutputDataTable DataTable="[PDFExtractDt]" DisplayName="Output Data Table - Brown Field" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[strPDFExtract]" />
+            <WriteLine DisplayName="Write Line - Brown Field" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[strPDFExtract]" />
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[PDFExtractDt]" DisplayName="Write Range Workbook - Brown Field" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="CmQuote" WorkbookPath="Data\Input\Test_Quote.xlsx" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1296, 1000" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAABJcSURBVGhDvZkHWBTn1scxifQqJaY9id4kagRFkSbYY6ELolJUxB6NShQIIoiCVGli7BhL7MZGbKjAwu7CUnfZSlns0WjyXW7Kzf1uSPb/nXd2FyHReL/E3PM8/2eHmZ2Z/++c874z72LwPMIudHHMwMLTvKFfqDodyzq6HCtvwrHyBklNaodjVSuc+Co4CRR477Kwc/DJL9RvZeWeNRs+3Ft3if9+OIQuixl6pE49vOKBxpn3AMN49+DEuwOnyls68x0YSuaHVrURgAqOfCUByEhSDK+WwLmmESNEdXCp5ncNPfyp2MLZ8b8D4xD6QczwL251uvD+jpG8rzGC9xAMYDgBDOMA7vwKoJXEABQkLYCToFkLUNOAUXU1cK0XwLOpHB5Vn3e+NicoRner5xvmTp7ezqfVD1x532EUrxMuvP/hALrNk/FhlbdJrH06SGSeA2jRii/vASChKjRxACNrRfBo5JHK4S0pxXhZCbx4+x5Yjxz0/CoyIG57sWvFdxpm3pX3LQH8gwC0FXCuvE9iAFrzTvq+r6TWqaTsVzIABSctQDNJjGHCJqpCHQFUUwWqOICxzRc4gCnK45im+kzjlB5drLPwx8Npb43YnfdPuPG+J/Ms+8y8NvsjK6l9CGC4DsCJMv8YgJlXkXElZ/69KjlVQUYQDKCJABp1ACK4N5TDs/E6xkguYaL8DKaqjsO//VPSPkyuSFPrrPz/w/mIQu3O+xGPAVj2O0kEUPmI9BUBfEkAdwngBgegbR3KOpl/r5IZ10tOknJypAowCOeaWhoDArjVV3IA3mIGcBqTqQJ+bfsRqN6DkJtFCFZlfm/6mvWbOlv/WYwg8568f5F5PQBrn39w5l048w+7AVjrDOOyzzKv73u9cVkP9QYYJqzHSBG1UJ0e4LIO4Bh8W/UA2zD7Ti5mtaf+qLP27Bi2t07MzHt0A/zwBICvMILMO3ODV9/7rdrWoVlHm3Fmurnb+GNp22hEjQijavlw4wCuUgvRGJCehk/LAfi37UWQegdm3spD2J0szP1yI0JEy57dTn+L21U8mvdvaAGYeabvCeBbAmDt8003wEiu/29hWBW1T5X2gcXmfO2g1ZvX69cAjRgurIWLiAGUEUApVeAC3pcfw1TlQR3AdoTezEf4nUwCSEH0w3WYfDDgrM7qb8PCabS3Z8W/NaN5/8sBeJJ5DzLvTtl3o+xzAJUMgLUPm33u9gCgCnBzPg1WTlqjTxM3BqpFVIVqDmB040Uu+1qAA5z5GTdzyXwaKR1z7ydj4cNYLH60UtPfvf+Tp1jX03cfsOz3BvhBB9AJx5K7ePuQHAOKmzBgH+nTRvqswzsnJBhypaUHgOx3AYbSTMT637m6mipAU2jDFcp+CcY1f46J0uPwURUjoO0TBHfkUwtlEcAmRN3/mJnHB98sxjzprDs6y4/jldBVMV68n8i8HuBHTkNP3cOrmRWwXvUZLFeQVh+H9ZqTsIk7o9XaU7BZcww2qw7B7qODeGPbNbxzrumJxvVy5LNB3EAANQTAg3vdVa4CY5rO4H3ZIarAfvi37sSMjmyE3U7FnLvrEPXlWix5tIID+OCbhRi2bEjvJ7b7F193evG66CmohRh+7hvYxJ6B+YqjsIg5A8vYEljFX4T1ulJYr78Km+Rr6LfhOmw5XSOVwi7pMmzXnYftmiNwWHcE71wU/8b8UL6EZqEmAqjHiGo+XEVl8Ki7RObPYbzkJCbL9sNHuQsBrVsRrM7BzBtpiLizngNY9NVyLHm4CMseRWO+csYDnXUDg1cp+9468x5l/8Lr+Y0wW3ESZh+dh/nai7D4uBSWiWWwSq6E9UYBbFKrYbO5Bv1Ithki2GXQZ3o17DbzYZ9WAftN12GfdAF2BPJa/iUM4fVuJ5Z9J0Ed10KuomscwNjGU5ggOcoBTJXvJYBCqkAGZt1IxpzbsZh3NwYL7i/H0ocLsezhPCz/OhKvuNtpx4LLkVa1N+9neJb9G/2SK2C6ugRmay/BPP4qzBN5sEgWwmqjCFZpDbDOaIJNlgT9sqXolyOF7RYp7Ej2uRL6bIJ9Tj3ss2rgkM6HQ1oZ7BPPo3/qmW4Irv8FtXAWCjGyupwASgngAsY0HscE8UFMbt6NafId8FPmI7htM2Z1JCLi1lpE3VuFBfcWYdGX0Vj2VQSWPwqD70Ev7YzkVdGlYeZtKbsmay7DJPYqTBMqYJ4khHlKHSxSG2GZLoVVpgxWOQrYbFGhX14L+uW3wraAqQV2JPtCJewLFLDPb4ZDbhMcskVwyKiC/YbL6J9ewkE48hsJQIThAgG1EA+jaq4SwFmMbTqKieK9mNK8Hb6KAgQoMzG9JQVhN+IReXM15t35sBtgyf1ILH0wG9Fy3wfUPqtjxlD27SmzxmuvwSSuDKbr+DBNFsFsYyPM06SwyJDDMktF5lthtaUV1nltsMlvR78CUqEatlvVsNvaDvsiNamN1AqHrUo4FDTj5dwGvJwlhMPGUrxedI0WNjVkno8RwnK4CEvhLjoH91oCaDhIAHswRVKIac15CFCkI7glCTPb4xDesRJzby7G/DuLsfDePAII5wCW3p+uMXDZXSd+79gjGMVWwDi+EsYJQpgk18F0oxhmaTKYpythkdkCi+xWWOa0EUA7rHLbYZ2vhk1BBwEwMYgO2BV1wH5bB2Vf8oNFRMY+04nRa0wnRMVahqcdstt07Tv7lCt490w1nAWVGCm8QgCX4CE6Bc/akzqAXQRQgGmSbAQqUugdKB6hrfEIU69ChHoJ5t6IRtStuVh0L4zMhzIAGIy+/E+NRUojjOIFMEqohnFSPUxSJDBNlcFssxJmGS0wz2wlgHZY5LTDkgNQwypP3Q1hwyAIwDa/Da+v+Owrri+fEJZhKYf7Z1yGM78UIwUXMEp4Fm7VJ+BVewBj63djYkMhJjXmw0eSikD5BgQrYzGzZSXC2pYgUr2QAKIIIBLRt2YRxAwsvhcIA6fjX8Pw4xoyXwvj9Q0w3iCBySYZTNKUME1XwSy9BWaZbTDPavtdCKuPy2E5dnm5zutTw3J2yrEhJRVwEZTAVXgSHtWH4V27H+PqdxBAHiY3ZWGaOBW+kiQEydYiRPkRZqqWIrxtPuaowzDvxizMvzkDC25Nx6K7BPDmnnswTKiDYWIDjJIkMEqRwXiTkgBUMElvhWmGVnoI82wC+RWE5YfnYToh8Qedx2fGO4cualz4n8NdeIC0nwB2Y2zddoyv34opjalUgQ3wk8QhUBaLGcrlpKUIa2UA4ZjbEUYAoQQQhEW3/WFgS0b6JjbBcL0YhhukBKCEEQEYp7XAZDOJQehAngRhEVcOs8kbYeQcflTn75nhWHDwhiv/ENwEB+FBAKNrCKC2ABPr0jCpbiOmNcXDTxyDwOYVmC5dihDZAgKYi8i2MMxVhyKqIwQLbvpj4S1fGFhltRKAGH2TpAQgh2GKAkYbVTBKbXkMsfkpEOtryfwGmPlmoe/bkxJ0/p4Zf1v18RFXPmVfUAxP4Q54CfMwriYDE0UpmFS7HpPr4uHTuBr+4uWY3hyNYOl8zFREIkw1C5GtIZjbFoAotR8ixJM6DV5KbMZLZL5vkgx9NygIQAlDBrDpMYQVDeTBhS3w2qWC1256199Gc38WjZHAHJj5ZcM8oIABxOn8PTPMnd72dqvaCY+qrfAUbOMAxgjTMKEmiQASCCAWPg0r4d+4GEHiKAKIwizFbIQpghHREqwFaPfDhB0jzhq8uF5OADK8lCznAPqmqDgApsl7lCi6qkB5gxzN0maoFFJObLtcJMa2o6WYFn8Y5tM/IYD31+r8PTMGxEcUu1cWagGqtsBLkMUBjBcmYJLoY0ytXQHf+qUEsJAA5iFYEoYZ0jDMlgchXBmESJUf5rT4aMxeNX6TAGTgIJIVJCVBKDG8UIFTAgVu3Wjn1KKUQdbcBKlObJvt0x8/VUrv9ZGZjTp/z4wRX2R1uvPyCSCPALLhzd+EsYIkjBfEYVLNWkwWfQifugUIaIxCQEMEpovDESIJxgxJEGZJ/REun0YLG1ced7E+6yRdLybJ8WKSkgOYuU+KlhYVOtpbIJGIOcllzWhtUUBFpplaVHLIpRJIxI2cbtB3VUoFgoICormL/k68vtg/061iK60xyHxlKrwqN8C7KgVj+eswjr8GE6tjMEW0DNNqo+FXPxeBBBDUMBMh4iCENgdyAKENUx+vj/usqel8Yb2CABQIKZbi9k01Z5gZZ5lWKWRoqBfh7OlTOLBvLw58uhfnTn+Oxvpa7phUwiCa6BwJV43AwID5ukv/JgwdbN4cVbZF41aeBfeKdFpvpBDAenhXJpD5tRzAJOEyTKlZiCnVUfARRcC/LpQAZmB6QxBCmgIQLJr6o+kr1DrdEXmA90KiAo55csqyEnK5DM1knhljBsuvX0VeThbSUzcic3MqJ7advyUbvPLr3RDNEgbBjZOuwYMHjdBdvVcwANdrqV1u5enwqNgEz4okeoVfRwBxZH41JvCXYRKfmZ+PqdWR8KmZjYD6UATWByO4MQi+pZMfmPQyz8J1bswLiXKc5Em624YZUsqlEAn5yMnKQHbGZg4iNzuTE9tm+9h2nUgIBRmXEQCrxA11K44ePlRLV+6jvUHv6DfeabbbtQ1dnhXrMboiAV4VcQQQi3FVywlgCQFE431BNKYKIwhgJvxrgxFYF6hxyx319MX8+G1SDWsdbdswAO0gPXxoPzLSNnGGtxCIHoBt66ty/Mhn9F05dw47l0GwVvL2Gu2ju/wT441F4zNHHl6s9riy8scxvJUYV/kBJlQtxsSqBZgsmEMK04wvCXzglOhcbNLf5Pd/1Co6X/3DrZsduuxrjbAqbC8q5DLd03xPiKz0NOzavo0G9GNwBnCbrpVXUHhBd/m/NkxMjM0qqqr+zmVRZ4IZahY34JOtBb8LwI4xSAbLzmGf7PxWlQJlfJHGyLr/u7rb/HUxaNC7znTjn1kG9dKOgWbs27OLG7R6wz3Ns092bH/xHjZwuXP052un2CY4Lj2kMRoanKm71V8THu5u77N+p8xpWAW4BxaZYfuuXrnI9XnPAdxT7Nj1q5d7ALBztS3IEjBuzTFYztgDi4DCzhdt3/5Tv/e/ZDPA2+itMb/954eb66gJOgO/MABtP2shmIljRw5h86aU7lZiYr3P9p08doT7jt68to20EOyaY3QAnEJ2w8I/v9NkxJziPib9/uNfmo0H+2VaTEhU2/jlwcYvFyaDfHpXdODAAUOo37vo5hoyQXoMoTd1oeQsdmzbioLcHE47PynCpQvnafqU9PpezxZizxJqoV4AliG7YBW8k5Olb26n+fgEsZn3ap7hwAkxhgPHxxiRTF0XnjX3XMmznJbRaeWXr7H2zwcTA7D23aJ5yeat3pU0NDQ0Lrteeo9aRsOq8NiM1hhrJXWbCpKmelTxyjix7fY2JXfs1wDcIKYJoVxQC9vZxU8FsJq+g7Sd9Amsgpi2wTqwiLQV1gFMhWS8gDOvBzB1mvnk/9gU5ueevn2z/Rcy9hMZIZAmrjWYqdJLF/Dp3t0oKshDYd4WrgJbaZvtY8fYd7RtxCC0g5dNo0XHaIkZuve5AVh4rxHr7P42xo0bG8A9yJrqu6gKGupfjZDPw06a49mDjM02OZnpvcT2sWPsOVDNr9K9UuifA+2YmnDyuQGwMaCz+uToQ3Hi+JHGDmoVymgXr/watmRmaJjJp81ATOwY+86WrExU0nuRXCblXkdOXOaTeWqf5wDwTPP6GDJksEt7q/Jnerfpopnm55yMdGZQw8z1fAbopZ2RGES2dobKzkJ9nQhtrS1w+ZBmn+cAYD4m9ult86QInRGy8MTRwyyrv1CbdOnMEoTW7GPzWuWSafZ3Dn1mbk4DOzc84xwsZu77UwBW/oUa48H+f+wBOMpl5EJ6Vf6pKD+XZbaLgRDALyRdNXQi0znZlP2sLBrgucjPy8PoJVthEbITFnrzfwDAckragxf7Dfxz/+R+7bVXXWJWrqhm70JMbObRZp5BZGjYNtunP746ay/eSBKCLYyMFpfALHg7Z1ZrnowzPQPA0je7kz0HdBaeTzgOHRo0b07kieTEhNtUiZ/YIoaJbSelbHo0L2X3947J1zR91snRhxZFbGHEre7WSWG0ogymc2ksUGYtyTAnqo5VMBnXAVqEH4DFxKQO9iDT3fKvib59+5o42Nu/S0/tsUz29vaD2D7dYW5RZBC5n2dAy9M+Cc1dDEK/TGVrbcP4BhjFiWASUwnr1dd+fvnDkm/7RxQKdGf/iTAw+D+Pxlj+kOCwdgAAAABJRU5ErkJggg==" InformativeScreenshot="7d6b6faa8949590fdfc60f0c8f163fd0.jpg" Selector="&lt;html app='msedge.exe' title='KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf' /&gt;" Title="KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf" Url="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/KLF149217%20-%20KILIFI%20COUNTY%20HOSPITAL%20(KILIFI%20COUNTY%20MEDICAL%20COMPLEX)%20-%20PDF.pdf" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf" sap:VirtualizedContainerService.HintSize="530,1889.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="48dfbc9c-45ad-438c-b437-2a8553fd8b15" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1670" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="ProjectName" />
+              <Variable x:TypeArguments="x:String" Name="Partner" />
+              <Variable x:TypeArguments="x:String" Name="strLinearRateExtract" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,270.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[LinearRateExtractDt]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='CV' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Item Description' ReferenceIdx='0' Name='Item Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price i m' ReferenceIdx='1' Name='Price i m'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='QTY' ReferenceIdx='2' Name='QTY'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total' ReferenceIdx='3' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" sap:VirtualizedContainerService.HintSize="388,160" sap2010:WorkflowViewState.IdRef="NExtractData_7" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="48dfbc9c-45ad-438c-b437-2a8553fd8b15" Version="V3">
+                    <uix:NExtractData.ExtractMetadata>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </uix:NExtractData.ExtractMetadata>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable CvElementArea="293, 221, 659, 145" CvType="Table" DesignTimeRectangle="293, 221, 659, 145" DesignTimeScaleFactor="1" ElementType="Table" FriendlyName="'msedge.exe MRN149405'" Guid="40dd5506-87c8-4fa6-8527-cc60e3f8c5cf" InformativeScreenshot="e4786e8cbd6a80550a41f1e5714d437c.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='MRN149405 - MURANGA COUNTY GOVERNMENT - MURIRANJAS HOSPITAL.pdf *' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:OutputDataTable DataTable="[LinearRateExtractDt]" DisplayName="Output Data Table - Linear Rate" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[strLinearRateExtract]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line - Linear Rate" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[strLinearRateExtract]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[LinearRateExtractDt]" DisplayName="Write Range Workbook - Linear Rate" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Linear" WorkbookPath="Data\Input\Test_Quote.xlsx" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll 'Section A Service Costs'" sap:VirtualizedContainerService.HintSize="434,260.6666666666667" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="48dfbc9c-45ad-438c-b437-2a8553fd8b15" Version="V3">
+              <uix:NMouseScroll.SearchedElement>
+                <uix:SearchedElement>
+                  <uix:SearchedElement.Target>
+                    <uix:TargetAnchorable BrowserURL="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/MRN149405%20-%20MURANGA%20COUNTY%20GOVERNMENT%20-%20MURIRANJAS%20HOSPITAL.pdf" CvTextArea="305, 235, 139, 18" CvTextArgument="Project Overview :" CvType="Text" DesignTimeRectangle="305, 235, 139, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Project Overview'" Guid="0f60373f-a82a-4456-8636-28034b147206" InformativeScreenshot="2decf90ba6c3f12769b405692462ca8c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MRN149405 - MURANGA COUNTY GOVERNMENT - MURIRANJAS HOSPITAL.pdf' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="299, 187, 138, 28" CvTextArgument="Safaricom" CvType="Text" DesignTimeRectangle="297, 188, 140, 27" ElementType="Text" FriendlyName="'Safaricom'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:SearchedElement.Target>
+                  <uix:SearchedElement.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:SearchedElement.Timeout>
+                </uix:SearchedElement>
+              </uix:NMouseScroll.SearchedElement>
+              <uix:NMouseScroll.Target>
+                <uix:TargetAnchorable BrowserURL="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/MRN149405%20-%20MURANGA%20COUNTY%20GOVERNMENT%20-%20MURIRANJAS%20HOSPITAL.pdf" CvTextArea="304, 335, 186, 15" CvTextArgument="Section A Service Costs" CvType="Text" DesignTimeRectangle="304, 335, 186, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Section A Service Costs'" Guid="4654af68-d8aa-495d-b91a-f7ed7e90f639" InformativeScreenshot="0874dd320f8a8c1ef36fd590e2a21b6e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MRN149405 - MURANGA COUNTY GOVERNMENT - MURIRANJAS HOSPITAL.pdf' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="299, 287, 138, 28" CvTextArgument="Safaricom" CvType="Text" DesignTimeRectangle="299, 287, 138, 28" ElementType="Text" FriendlyName="'Safaricom'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NMouseScroll.Target>
+            </uix:NMouseScroll>
+            <uix:NGetText DisplayName="Get Text - Project Name" sap:VirtualizedContainerService.HintSize="434,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="48dfbc9c-45ad-438c-b437-2a8553fd8b15" TextString="[ProjectName]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/MLV549393%20-%20ONE%20ACRE%20FUND%20MALAVA.pdf" CvElementArea="464, 281, 487, 25" CvType="InputBox" DesignTimeRectangle="458, 281, 495, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'KINDE_FTTB_2023_2024_ML…'" Guid="f2bb4748-e4c1-4e9f-aa32-c516aa929d46" InformativeScreenshot="4e91b30958bb8298c656d8d89f8fe13d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MLV549393 - ONE ACRE FUND MALAVA.pdf' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="305, 235, 139, 18" CvTextArgument="Project Overview :" CvType="Text" DesignTimeRectangle="305, 235, 139, 19" ElementType="Text" FriendlyName="'Project Overview'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Project Name is - &quot;+ProjectName]" />
+            <uix:NGetText DisplayName="Get Text 'Project leader'" sap:VirtualizedContainerService.HintSize="434,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="48dfbc9c-45ad-438c-b437-2a8553fd8b15" TextString="[Partner]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/MRN149405%20-%20MURANGA%20COUNTY%20GOVERNMENT%20-%20MURIRANJAS%20HOSPITAL.pdf" CvElementArea="462, 351, 485, 24" CvType="InputBox" DesignTimeRectangle="466, 351, 480, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Project leader'" Guid="d9844e33-94df-4b06-a8cd-ef830469fdda" InformativeScreenshot="0395246e1cdc6ccebebb86d3b80851f6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MRN149405 - MURANGA COUNTY GOVERNMENT - MURIRANJAS HOSPITAL.pdf' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="306, 355, 105, 17" CvTextArgument="Project leader:" CvType="Text" DesignTimeRectangle="306, 355, 105, 17" ElementType="Text" FriendlyName="'Project leader'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Partner Name is - &quot;+Partner]" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[PartnerShort]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Partner.split(" "c)(1)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;The Short Partner Name is - &quot;+ PartnerShort]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1296, 1000" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAABJcSURBVGhDvZkHWBTn1scxifQqJaY9id4kagRFkSbYY6ELolJUxB6NShQIIoiCVGli7BhL7MZGbKjAwu7CUnfZSlns0WjyXW7Kzf1uSPb/nXd2FyHReL/E3PM8/2eHmZ2Z/++c874z72LwPMIudHHMwMLTvKFfqDodyzq6HCtvwrHyBklNaodjVSuc+Co4CRR477Kwc/DJL9RvZeWeNRs+3Ft3if9+OIQuixl6pE49vOKBxpn3AMN49+DEuwOnyls68x0YSuaHVrURgAqOfCUByEhSDK+WwLmmESNEdXCp5ncNPfyp2MLZ8b8D4xD6QczwL251uvD+jpG8rzGC9xAMYDgBDOMA7vwKoJXEABQkLYCToFkLUNOAUXU1cK0XwLOpHB5Vn3e+NicoRner5xvmTp7ezqfVD1x532EUrxMuvP/hALrNk/FhlbdJrH06SGSeA2jRii/vASChKjRxACNrRfBo5JHK4S0pxXhZCbx4+x5Yjxz0/CoyIG57sWvFdxpm3pX3LQH8gwC0FXCuvE9iAFrzTvq+r6TWqaTsVzIABSctQDNJjGHCJqpCHQFUUwWqOICxzRc4gCnK45im+kzjlB5drLPwx8Npb43YnfdPuPG+J/Ms+8y8NvsjK6l9CGC4DsCJMv8YgJlXkXElZ/69KjlVQUYQDKCJABp1ACK4N5TDs/E6xkguYaL8DKaqjsO//VPSPkyuSFPrrPz/w/mIQu3O+xGPAVj2O0kEUPmI9BUBfEkAdwngBgegbR3KOpl/r5IZ10tOknJypAowCOeaWhoDArjVV3IA3mIGcBqTqQJ+bfsRqN6DkJtFCFZlfm/6mvWbOlv/WYwg8568f5F5PQBrn39w5l048w+7AVjrDOOyzzKv73u9cVkP9QYYJqzHSBG1UJ0e4LIO4Bh8W/UA2zD7Ti5mtaf+qLP27Bi2t07MzHt0A/zwBICvMILMO3ODV9/7rdrWoVlHm3Fmurnb+GNp22hEjQijavlw4wCuUgvRGJCehk/LAfi37UWQegdm3spD2J0szP1yI0JEy57dTn+L21U8mvdvaAGYeabvCeBbAmDt8003wEiu/29hWBW1T5X2gcXmfO2g1ZvX69cAjRgurIWLiAGUEUApVeAC3pcfw1TlQR3AdoTezEf4nUwCSEH0w3WYfDDgrM7qb8PCabS3Z8W/NaN5/8sBeJJ5DzLvTtl3o+xzAJUMgLUPm33u9gCgCnBzPg1WTlqjTxM3BqpFVIVqDmB040Uu+1qAA5z5GTdzyXwaKR1z7ydj4cNYLH60UtPfvf+Tp1jX03cfsOz3BvhBB9AJx5K7ePuQHAOKmzBgH+nTRvqswzsnJBhypaUHgOx3AYbSTMT637m6mipAU2jDFcp+CcY1f46J0uPwURUjoO0TBHfkUwtlEcAmRN3/mJnHB98sxjzprDs6y4/jldBVMV68n8i8HuBHTkNP3cOrmRWwXvUZLFeQVh+H9ZqTsIk7o9XaU7BZcww2qw7B7qODeGPbNbxzrumJxvVy5LNB3EAANQTAg3vdVa4CY5rO4H3ZIarAfvi37sSMjmyE3U7FnLvrEPXlWix5tIID+OCbhRi2bEjvJ7b7F193evG66CmohRh+7hvYxJ6B+YqjsIg5A8vYEljFX4T1ulJYr78Km+Rr6LfhOmw5XSOVwi7pMmzXnYftmiNwWHcE71wU/8b8UL6EZqEmAqjHiGo+XEVl8Ki7RObPYbzkJCbL9sNHuQsBrVsRrM7BzBtpiLizngNY9NVyLHm4CMseRWO+csYDnXUDg1cp+9468x5l/8Lr+Y0wW3ESZh+dh/nai7D4uBSWiWWwSq6E9UYBbFKrYbO5Bv1Ithki2GXQZ3o17DbzYZ9WAftN12GfdAF2BPJa/iUM4fVuJ5Z9J0Ed10KuomscwNjGU5ggOcoBTJXvJYBCqkAGZt1IxpzbsZh3NwYL7i/H0ocLsezhPCz/OhKvuNtpx4LLkVa1N+9neJb9G/2SK2C6ugRmay/BPP4qzBN5sEgWwmqjCFZpDbDOaIJNlgT9sqXolyOF7RYp7Ej2uRL6bIJ9Tj3ss2rgkM6HQ1oZ7BPPo3/qmW4Irv8FtXAWCjGyupwASgngAsY0HscE8UFMbt6NafId8FPmI7htM2Z1JCLi1lpE3VuFBfcWYdGX0Vj2VQSWPwqD70Ev7YzkVdGlYeZtKbsmay7DJPYqTBMqYJ4khHlKHSxSG2GZLoVVpgxWOQrYbFGhX14L+uW3wraAqQV2JPtCJewLFLDPb4ZDbhMcskVwyKiC/YbL6J9ewkE48hsJQIThAgG1EA+jaq4SwFmMbTqKieK9mNK8Hb6KAgQoMzG9JQVhN+IReXM15t35sBtgyf1ILH0wG9Fy3wfUPqtjxlD27SmzxmuvwSSuDKbr+DBNFsFsYyPM06SwyJDDMktF5lthtaUV1nltsMlvR78CUqEatlvVsNvaDvsiNamN1AqHrUo4FDTj5dwGvJwlhMPGUrxedI0WNjVkno8RwnK4CEvhLjoH91oCaDhIAHswRVKIac15CFCkI7glCTPb4xDesRJzby7G/DuLsfDePAII5wCW3p+uMXDZXSd+79gjGMVWwDi+EsYJQpgk18F0oxhmaTKYpythkdkCi+xWWOa0EUA7rHLbYZ2vhk1BBwEwMYgO2BV1wH5bB2Vf8oNFRMY+04nRa0wnRMVahqcdstt07Tv7lCt490w1nAWVGCm8QgCX4CE6Bc/akzqAXQRQgGmSbAQqUugdKB6hrfEIU69ChHoJ5t6IRtStuVh0L4zMhzIAGIy+/E+NRUojjOIFMEqohnFSPUxSJDBNlcFssxJmGS0wz2wlgHZY5LTDkgNQwypP3Q1hwyAIwDa/Da+v+Owrri+fEJZhKYf7Z1yGM78UIwUXMEp4Fm7VJ+BVewBj63djYkMhJjXmw0eSikD5BgQrYzGzZSXC2pYgUr2QAKIIIBLRt2YRxAwsvhcIA6fjX8Pw4xoyXwvj9Q0w3iCBySYZTNKUME1XwSy9BWaZbTDPavtdCKuPy2E5dnm5zutTw3J2yrEhJRVwEZTAVXgSHtWH4V27H+PqdxBAHiY3ZWGaOBW+kiQEydYiRPkRZqqWIrxtPuaowzDvxizMvzkDC25Nx6K7BPDmnnswTKiDYWIDjJIkMEqRwXiTkgBUMElvhWmGVnoI82wC+RWE5YfnYToh8Qedx2fGO4cualz4n8NdeIC0nwB2Y2zddoyv34opjalUgQ3wk8QhUBaLGcrlpKUIa2UA4ZjbEUYAoQQQhEW3/WFgS0b6JjbBcL0YhhukBKCEEQEYp7XAZDOJQehAngRhEVcOs8kbYeQcflTn75nhWHDwhiv/ENwEB+FBAKNrCKC2ABPr0jCpbiOmNcXDTxyDwOYVmC5dihDZAgKYi8i2MMxVhyKqIwQLbvpj4S1fGFhltRKAGH2TpAQgh2GKAkYbVTBKbXkMsfkpEOtryfwGmPlmoe/bkxJ0/p4Zf1v18RFXPmVfUAxP4Q54CfMwriYDE0UpmFS7HpPr4uHTuBr+4uWY3hyNYOl8zFREIkw1C5GtIZjbFoAotR8ixJM6DV5KbMZLZL5vkgx9NygIQAlDBrDpMYQVDeTBhS3w2qWC1256199Gc38WjZHAHJj5ZcM8oIABxOn8PTPMnd72dqvaCY+qrfAUbOMAxgjTMKEmiQASCCAWPg0r4d+4GEHiKAKIwizFbIQpghHREqwFaPfDhB0jzhq8uF5OADK8lCznAPqmqDgApsl7lCi6qkB5gxzN0maoFFJObLtcJMa2o6WYFn8Y5tM/IYD31+r8PTMGxEcUu1cWagGqtsBLkMUBjBcmYJLoY0ytXQHf+qUEsJAA5iFYEoYZ0jDMlgchXBmESJUf5rT4aMxeNX6TAGTgIJIVJCVBKDG8UIFTAgVu3Wjn1KKUQdbcBKlObJvt0x8/VUrv9ZGZjTp/z4wRX2R1uvPyCSCPALLhzd+EsYIkjBfEYVLNWkwWfQifugUIaIxCQEMEpovDESIJxgxJEGZJ/REun0YLG1ced7E+6yRdLybJ8WKSkgOYuU+KlhYVOtpbIJGIOcllzWhtUUBFpplaVHLIpRJIxI2cbtB3VUoFgoICormL/k68vtg/061iK60xyHxlKrwqN8C7KgVj+eswjr8GE6tjMEW0DNNqo+FXPxeBBBDUMBMh4iCENgdyAKENUx+vj/usqel8Yb2CABQIKZbi9k01Z5gZZ5lWKWRoqBfh7OlTOLBvLw58uhfnTn+Oxvpa7phUwiCa6BwJV43AwID5ukv/JgwdbN4cVbZF41aeBfeKdFpvpBDAenhXJpD5tRzAJOEyTKlZiCnVUfARRcC/LpQAZmB6QxBCmgIQLJr6o+kr1DrdEXmA90KiAo55csqyEnK5DM1knhljBsuvX0VeThbSUzcic3MqJ7advyUbvPLr3RDNEgbBjZOuwYMHjdBdvVcwANdrqV1u5enwqNgEz4okeoVfRwBxZH41JvCXYRKfmZ+PqdWR8KmZjYD6UATWByO4MQi+pZMfmPQyz8J1bswLiXKc5Em624YZUsqlEAn5yMnKQHbGZg4iNzuTE9tm+9h2nUgIBRmXEQCrxA11K44ePlRLV+6jvUHv6DfeabbbtQ1dnhXrMboiAV4VcQQQi3FVywlgCQFE431BNKYKIwhgJvxrgxFYF6hxyx319MX8+G1SDWsdbdswAO0gPXxoPzLSNnGGtxCIHoBt66ty/Mhn9F05dw47l0GwVvL2Gu2ju/wT441F4zNHHl6s9riy8scxvJUYV/kBJlQtxsSqBZgsmEMK04wvCXzglOhcbNLf5Pd/1Co6X/3DrZsduuxrjbAqbC8q5DLd03xPiKz0NOzavo0G9GNwBnCbrpVXUHhBd/m/NkxMjM0qqqr+zmVRZ4IZahY34JOtBb8LwI4xSAbLzmGf7PxWlQJlfJHGyLr/u7rb/HUxaNC7znTjn1kG9dKOgWbs27OLG7R6wz3Ns092bH/xHjZwuXP052un2CY4Lj2kMRoanKm71V8THu5u77N+p8xpWAW4BxaZYfuuXrnI9XnPAdxT7Nj1q5d7ALBztS3IEjBuzTFYztgDi4DCzhdt3/5Tv/e/ZDPA2+itMb/954eb66gJOgO/MABtP2shmIljRw5h86aU7lZiYr3P9p08doT7jt68to20EOyaY3QAnEJ2w8I/v9NkxJziPib9/uNfmo0H+2VaTEhU2/jlwcYvFyaDfHpXdODAAUOo37vo5hoyQXoMoTd1oeQsdmzbioLcHE47PynCpQvnafqU9PpezxZizxJqoV4AliG7YBW8k5Olb26n+fgEsZn3ap7hwAkxhgPHxxiRTF0XnjX3XMmznJbRaeWXr7H2zwcTA7D23aJ5yeat3pU0NDQ0Lrteeo9aRsOq8NiM1hhrJXWbCpKmelTxyjix7fY2JXfs1wDcIKYJoVxQC9vZxU8FsJq+g7Sd9Amsgpi2wTqwiLQV1gFMhWS8gDOvBzB1mvnk/9gU5ueevn2z/Rcy9hMZIZAmrjWYqdJLF/Dp3t0oKshDYd4WrgJbaZvtY8fYd7RtxCC0g5dNo0XHaIkZuve5AVh4rxHr7P42xo0bG8A9yJrqu6gKGupfjZDPw06a49mDjM02OZnpvcT2sWPsOVDNr9K9UuifA+2YmnDyuQGwMaCz+uToQ3Hi+JHGDmoVymgXr/watmRmaJjJp81ATOwY+86WrExU0nuRXCblXkdOXOaTeWqf5wDwTPP6GDJksEt7q/Jnerfpopnm55yMdGZQw8z1fAbopZ2RGES2dobKzkJ9nQhtrS1w+ZBmn+cAYD4m9ult86QInRGy8MTRwyyrv1CbdOnMEoTW7GPzWuWSafZ3Dn1mbk4DOzc84xwsZu77UwBW/oUa48H+f+wBOMpl5EJ6Vf6pKD+XZbaLgRDALyRdNXQi0znZlP2sLBrgucjPy8PoJVthEbITFnrzfwDAckragxf7Dfxz/+R+7bVXXWJWrqhm70JMbObRZp5BZGjYNtunP746ay/eSBKCLYyMFpfALHg7Z1ZrnowzPQPA0je7kz0HdBaeTzgOHRo0b07kieTEhNtUiZ/YIoaJbSelbHo0L2X3947J1zR91snRhxZFbGHEre7WSWG0ogymc2ksUGYtyTAnqo5VMBnXAVqEH4DFxKQO9iDT3fKvib59+5o42Nu/S0/tsUz29vaD2D7dYW5RZBC5n2dAy9M+Cc1dDEK/TGVrbcP4BhjFiWASUwnr1dd+fvnDkm/7RxQKdGf/iTAw+D+Pxlj+kOCwdgAAAABJRU5ErkJggg==" InformativeScreenshot="7d6b6faa8949590fdfc60f0c8f163fd0.jpg" Selector="&lt;html app='msedge.exe' title='KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf' /&gt;" Title="KLF149217 - KILIFI COUNTY HOSPITAL (KILIFI COUNTY MEDICAL COMPLEX) - PDF.pdf" Url="file:///D:/OneDrive/Enterprise%20Business%20Services/Projects/Automation/RPA/Capstone-Project-PR-Raising/Data/Input/KLF149217%20-%20KILIFI%20COUNTY%20HOSPITAL%20(KILIFI%20COUNTY%20MEDICAL%20COMPLEX)%20-%20PDF.pdf" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BPA-CM_Translator.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="530,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BPA-CM_Translator.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="inPartner">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PartnerShort" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
