@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Data_Entry_Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="706,15830" sap2010:WorkflowViewState.IdRef="Data_Entry_Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Data_Entry_Test" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="inShub" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>706,15379.333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Data_Entry_Test_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,9 +113,10 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Data_Entry_Test" sap:VirtualizedContainerService.HintSize="716,15765.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Data_Entry_Test" sap:VirtualizedContainerService.HintSize="716,15314.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="BpaOptimax" />
       <Variable x:TypeArguments="x:String" Default="SOLITON_FTTB_2023/2024_KLF149217- KILIFI COUNTY MEDICAL COMPLEX" Name="ProjectName" />
@@ -127,13 +136,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Oracle iProcurement: Shop" sap:VirtualizedContainerService.HintSize="654,15654.666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a7201b1a-a2bb-4d1c-b3c7-45bc0961f6c7" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Oracle iProcurement: Shop" sap:VirtualizedContainerService.HintSize="654,15204" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a7201b1a-a2bb-4d1c-b3c7-45bc0961f6c7" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="620,15435.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap:VirtualizedContainerService.HintSize="620,14984.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="1" Name="Task" />
               <Variable x:TypeArguments="x:String" Default="KLF149217- KILIFI COUNTY MEDICAL&#xA;COMPLEX" Name="NoteToBuyer" />
@@ -145,13 +154,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="558,6915.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="558,6464.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,6799.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,6348.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,15 +185,32 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
-                <ui:ReadCsvFile sap2010:Annotation.AnnotationText="Fields of interest are:&#xA;&#xA;1) Oracle Description&#xA;2) Quantity&#xA;3) Price&#xA;4) Supplier&#xA;5) Supplier Site&#xA;6) BPA Number&#xA;&#xA;BPA Number will be useful for validation should two or more items be picked in advanced search.&#xA;&#xA;CSV data is extracted from:&#xA;&#xA;1) CM Quote in PDF format that includes Description (not like for like with Oracle), Quantity, Price, Supplier&#xA;2) Config File or Assets that includes Supplier Site, BPA Number, Oracle Description (Translator template from CM Quote)&#xA;&#xA;Sample static file currently in use to test data loading in Oracle" DataTable="[BpaOptimax]" Delimitator="Comma" DisplayName="Read CSV - Into Data Table" FilePath="Data\Input\BPA_516302_Details.csv" sap:VirtualizedContainerService.HintSize="434,504.6666666666667" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,615.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ReadCsvFile sap2010:Annotation.AnnotationText="Fields of interest are:&#xA;&#xA;1) Oracle Description&#xA;2) Quantity&#xA;3) Price&#xA;4) Supplier&#xA;5) Supplier Site&#xA;6) BPA Number&#xA;&#xA;BPA Number will be useful for validation should two or more items be picked in advanced search.&#xA;&#xA;CSV data is extracted from:&#xA;&#xA;1) CM Quote in PDF format that includes Description (not like for like with Oracle), Quantity, Price, Supplier&#xA;2) Config File or Assets that includes Supplier Site, BPA Number, Oracle Description (Translator template from CM Quote)&#xA;&#xA;Sample static file currently in use to test data loading in Oracle" DataTable="[BpaOptimax]" Delimitator="Comma" DisplayName="Read CSV - Into Data Table" FilePath="Data\Input\BPA_516302_Details.csv" sap:VirtualizedContainerService.HintSize="434,504.6666666666667" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ReadCsvFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:ReadCsvFile>
+                </ui:CommentOut>
                 <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="This ensures the fields are empty to allow for new search criteria&#xA;&#xA;Default fields in advance search are:&#xA;&#xA;1) Store - Main by default&#xA;2) Description (with the exact phrase) - blank&#xA;3) Supplier Item (with the exact phrase) - blank&#xA;4) Supplier (is) - blank&#xA;&#xA;We will add Supplier Site and Price fields in the search criteria" ClickType="Single" DisplayName="Click 'Clear' - Empty all fields" sap:VirtualizedContainerService.HintSize="434,371.3333333333333" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a7201b1a-a2bb-4d1c-b3c7-45bc0961f6c7" Version="V3">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://erpprod.safaricom.net/OA_HTML/OA.jsp?page=/oracle/apps/icx/icatalog/shopping/webui/ShoppingHomePG&amp;_ti=1359865412&amp;retainAM=N&amp;addBreadCrumb=N&amp;OASF=ICX_CAT_SHOP_HOME&amp;OAHP=ICX_POR_HOMEPAGE_MENU&amp;oapc=5&amp;oas=rwgKxTGiddRLo7-4C4e6pQ.." CvElementArea="203, 576, 46, 21" CvTextArea="211, 579, 33, 12" CvTextArgument="Clear" CvType="Button" DesignTimeRectangle="205, 577, 44, 19" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Clear'" FullSelectorArgument="&lt;webctrl id='mainTableLayout_SaveSearch' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='Clear' tableRow='21' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mainTableLayout_SaveSearch' tag='TABLE' /&gt;&lt;webctrl id='Clear' type='submit' tag='BUTTON' class='x80' aaname='Click to reset the Advanced Search page.' check:innerText='Clear' /&gt;" Guid="7f1e4086-2901-4ed9-9acb-6774b0e50a24" InformativeScreenshot="d61bd41c724c6ae07f2008ceb46ee50c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Oracle iProcurement: Shop' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
@@ -321,7 +347,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This is to add items to the shopping cart all the lines that were extracted from the CM Quote" DataTable="[BpaOptimax]" DisplayName="For Each Row in Data Table - Includes PDF Extraction plus other constants" sap:VirtualizedContainerService.HintSize="434,4236.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This is to add items to the shopping cart all the lines that were extracted from the CM Quote" DataTable="[inShub]" DisplayName="For Each Row in Data Table - Includes PDF Extraction plus other constants" sap:VirtualizedContainerService.HintSize="434,4236.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
@@ -358,7 +384,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Reads each row item one at a time from the data table. Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Description" DisplayName="Get Row Item - Description - From Data Table" sap:VirtualizedContainerService.HintSize="334,271.3333333333333" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[CurrentRow]">
+                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Reads each row item one at a time from the data table. Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Oracle Description" DisplayName="Get Row Item - Description - From Data Table" sap:VirtualizedContainerService.HintSize="334,271.3333333333333" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[CurrentRow]">
                           <ui:GetRowItem.Value>
                             <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
                           </ui:GetRowItem.Value>
@@ -368,7 +394,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetRowItem>
-                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Supplier" DisplayName="Get Row Item - Supplier - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[CurrentRow]">
+                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Oracle_Supplier_Name" DisplayName="Get Row Item - Supplier - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[CurrentRow]">
                           <ui:GetRowItem.Value>
                             <OutArgument x:TypeArguments="x:String">[Supplier]</OutArgument>
                           </ui:GetRowItem.Value>
@@ -378,7 +404,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetRowItem>
-                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Site" DisplayName="Get Row Item - Supplier Site - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[CurrentRow]">
+                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Supplier_Site" DisplayName="Get Row Item - Supplier Site - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[CurrentRow]">
                           <ui:GetRowItem.Value>
                             <OutArgument x:TypeArguments="x:String">[SupplierSite]</OutArgument>
                           </ui:GetRowItem.Value>
@@ -398,7 +424,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetRowItem>
-                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="Quantity" DisplayName="Get Row Item - Quantity - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[CurrentRow]">
+                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read values are to be entered into S-Hub to search specific item and then append quantity to selected item before adding to cart" ColumnName="QTY" DisplayName="Get Row Item - Quantity - From Data Table" sap:VirtualizedContainerService.HintSize="334,254.66666666666666" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[CurrentRow]">
                           <ui:GetRowItem.Value>
                             <OutArgument x:TypeArguments="x:String">[Quantity]</OutArgument>
                           </ui:GetRowItem.Value>

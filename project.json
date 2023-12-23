@@ -2,7 +2,7 @@
   "name": "VLookup Data Table",
   "projectId": "648c5e28-90f1-42b9-ae43-4a7463c250d0",
   "description": "Practise on VLookup in Data Tables",
-  "main": "BPA-CM_Translator.xaml",
+  "main": "PDF_Table_Extraction_Temp.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.21.1]",
@@ -57,6 +57,12 @@
     {
       "filePath": "Lookup-Practice.xaml",
       "uniqueId": "162bbeb2-4497-446c-ae97-43127b57543b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PDF_Table_Extraction_Temp.xaml",
+      "uniqueId": "5b35373f-3f58-4283-b866-eab66185ddb1",
       "input": [],
       "output": []
     }
