@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>614,4301.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>614,4613.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Excel_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_Automation" sap:VirtualizedContainerService.HintSize="558,4236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_Automation" sap:VirtualizedContainerService.HintSize="558,4548.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="BpaDt" />
       <Variable x:TypeArguments="sd:DataTable" Name="CmQuoteDt" />
@@ -163,13 +163,13 @@
       </ui:ReadRange.Range>
     </ui:ReadRange>
     <ui:ReadRange AddHeaders="True" DataTable="[BpaDt]" DisplayName="Read Range Workbook - BPA" sap:VirtualizedContainerService.HintSize="496,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A1:D140" SheetName="BPA" WorkbookPath="Test_Quote.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CmQuoteDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,1774" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CmQuoteDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,2086" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1584" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1896" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,7 +200,23 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:WriteCell>
             <ui:WriteCell Cell="H1" DisplayName="Write Cell Workbook - Column Name - Supplier Delivery Site" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="CmQuote" Text="Supplier_Site" WorkbookPath="Test_Quote.xlsx" />
+            <ui:WriteCell Cell="[&quot;H&quot;+(CmQuoteDt.Rows.IndexOf(currentrow)+2).ToString]" DisplayName="Write Cell Workbook - Oracle Supplier Delivery Site" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="CmQuote" Text="[OracleSupplierSite]" WorkbookPath="Test_Quote.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteCell>
             <ui:WriteCell Cell="I1" DisplayName="Write Cell Workbook - Oracle Source - Column Name" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="CmQuote" Text="Source" WorkbookPath="Test_Quote.xlsx" />
+            <ui:WriteCell Cell="[&quot;I&quot;+(CmQuoteDt.Rows.IndexOf(currentrow)+2).ToString]" DisplayName="Write Cell Workbook - Oracle Supplier Delivery Site" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="CmQuote" Text="[OracleSource]" WorkbookPath="Test_Quote.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteCell>
             <ui:ReadRange AddHeaders="True" DataTable="[ShubDt]" DisplayName="Read Range Workbook - Updated CMQuote" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="CmQuote" WorkbookPath="Test_Quote.xlsx">
               <ui:ReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
