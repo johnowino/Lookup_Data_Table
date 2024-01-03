@@ -4,6 +4,7 @@
   "description": "Practise on VLookup in Data Tables",
   "main": "PDF_Table_Extraction_Temp.xaml",
   "dependencies": {
+    "UiPath.DocumentUnderstanding.Activities": "[2.4.1]",
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.21.1]",
     "UiPath.System.Activities": "[23.10.3]",

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>548,4768.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>614,4768.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Excel_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -155,13 +155,7 @@
       </ui:LookupDataTable>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The Oracle source is: &quot;+OracleSource.ToString]" />
     </Sequence>
-    <ui:ReadRange AddHeaders="True" DataTable="[CmQuoteDt]" DisplayName="Read Range Workbook - CMQuote" sap:VirtualizedContainerService.HintSize="496,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="CmQuote" WorkbookPath="Test_Quote.xlsx">
-      <ui:ReadRange.Range>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </ui:ReadRange.Range>
-    </ui:ReadRange>
+    <ui:ReadRange AddHeaders="True" DataTable="[CmQuoteDt]" DisplayName="Read Range Workbook - CMQuote" sap:VirtualizedContainerService.HintSize="496,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="[Nothing]" SheetName="CmQuote" WorkbookPath="Test_Quote.xlsx" />
     <ui:ReadRange AddHeaders="True" DataTable="[BpaDt]" DisplayName="Read Range Workbook - BPA" sap:VirtualizedContainerService.HintSize="496,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A1:D140" SheetName="BPA" WorkbookPath="Test_Quote.xlsx" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CmQuoteDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,2086" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
@@ -217,29 +211,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WriteCell>
-            <ui:ReadRange AddHeaders="True" DataTable="[ShubDt]" DisplayName="Read Range Workbook - Updated CMQuote" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="CmQuote" WorkbookPath="Test_Quote.xlsx">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-            </ui:ReadRange>
+            <ui:ReadRange AddHeaders="True" DataTable="[ShubDt]" DisplayName="Read Range Workbook - Updated CMQuote" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="[Nothing]" SheetName="CmQuote" WorkbookPath="Test_Quote.xlsx" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:WriteRange AddHeaders="True" DataTable="[ShubDt]" DisplayName="Write Range Workbook - SHub" sap:VirtualizedContainerService.HintSize="496,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Shub" WorkbookPath="Test_Quote.xlsx">
-      <ui:WriteRange.StartingCell>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </ui:WriteRange.StartingCell>
-    </ui:WriteRange>
+    <ui:WriteRange AddHeaders="True" DataTable="[ShubDt]" DisplayName="Write Range Workbook - SHub" sap:VirtualizedContainerService.HintSize="496,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Shub" StartingCell="[Nothing]" WorkbookPath="Test_Quote.xlsx" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data Entry.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Entry.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="inShub">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="ShubDt" />
-        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="inShub">[ShubDt]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
