@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PDF_Table_Extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,3616.6666666666665" sap2010:WorkflowViewState.IdRef="PDF_Table_Extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PDF_Table_Extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="612,3616.6666666666665" sap2010:WorkflowViewState.IdRef="PDF_Table_Extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -319,12 +319,12 @@
               </uix:NGetText.Target>
             </uix:NGetText>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Partner Name is - &quot;+Partner]" />
-            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign - Short Partner Name" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[PartnerShort]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[Partner.split(" "c)(1)]</InArgument>
+                <InArgument x:TypeArguments="x:String">[Partner.split(" "c)(1).ToUpper.Trim]</InArgument>
               </Assign.Value>
             </Assign>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;The Short Partner Name is - &quot;+ PartnerShort]" />
@@ -344,12 +344,8 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;This is from end of PDF extraction: &quot;+ProjectName]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BPA-CM_Translator.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="530,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BPA-CM_Translator.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="inPartner">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PartnerShort" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ProjectName">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProjectName" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="inPartner">[PartnerShort]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ProjectName">[ProjectName]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
