@@ -1,7 +1,7 @@
 {
-  "name": "VLookup Data Table",
+  "name": "Capstone Group B Without REFramework",
   "projectId": "648c5e28-90f1-42b9-ae43-4a7463c250d0",
-  "description": "Practise on VLookup in Data Tables",
+  "description": "Project Demo",
   "main": "PDF_Table_Extraction_Temp.xaml",
   "dependencies": {
     "UiPath.DocumentUnderstanding.Activities": "[2.4.1]",
